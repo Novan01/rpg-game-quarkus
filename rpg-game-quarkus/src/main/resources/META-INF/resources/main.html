@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Main Menu</title>
+    <title>RPG</title>
+    <link rel="stylesheet" href="styles/main_menu_style.css">
 </head>
 <body>
     <h1>RPG Main Menu</h1>
-    <button onclick="playGame()">Play</button>
-    <button onclick="createCharacter()">Create New Character</button>
-
+    <div class="button-container">
+        <button onclick="playGame()" class="button-container">Play</button>
+        <br></bbr>
+        <button onclick="createCharacter()" class="button-container">Create New Character</button>
+    </div>
+    
     <script>
         function playGame() {
             // Redirect to the character selection page or perform other actions
@@ -18,6 +22,10 @@
             // Redirect to the character creation page or perform other actions
             window.location.href = "character-creator.html";
         }
+
+        //some js reference to grab MainMenu.java path
+        
     </script>
+
 </body>
 </html>

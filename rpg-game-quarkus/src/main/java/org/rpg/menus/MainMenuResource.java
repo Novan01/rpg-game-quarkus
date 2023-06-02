@@ -23,11 +23,5 @@ public class MainMenuResource {
 
 	}
 
-	@GET
-	@Produces(MediaType.TEXT_HTML)
-	public InputStream getMainMenuPage() {
-		InputStream is = getClass().getClassLoader().getResourceAsStream("main_menu.html");
-		return is;
-	}
 
 }
