@@ -3,6 +3,7 @@
 <head>
     <title>RPG</title>
     <link rel="stylesheet" href="styles/main_menu_style.css">
+    
 </head>
 <body>
     <h1>RPG Main Menu</h1>
@@ -20,11 +21,24 @@
 
         function createCharacter() {
             // Redirect to the character creation page or perform other actions
-            window.location.href = "character-creator.html";
+            window.location.href = "create.html";
         }
 
         //some js reference to grab MainMenu.java path
-        
+        function redirectToMainMenu() {
+            fetch('/main')
+                .then(response => {
+                if (response.ok) {
+                    window.location.href = '/main.html';
+                } else {
+                    console.log('Failed to load main.html');
+                }
+                })
+                    .catch(error => {
+                    console.error('Error:', error);
+                });
+        }
+
     </script>
 
 </body>

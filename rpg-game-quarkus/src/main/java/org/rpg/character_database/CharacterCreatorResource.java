@@ -15,7 +15,6 @@ public class CharacterCreatorResource {
     private Dice dice;
 
     @POST
-    @Path("/create")
     public Response createCharacter(Character player) {
         try {
             //validate character data and preform necessary operations
