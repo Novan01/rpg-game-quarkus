@@ -3,9 +3,12 @@ package org.rpg.character_database;
 import org.rpg.extras.Dice;
 import org.rpg.character_classes.Character;
 
+import jakarta.inject.Inject;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
+
+import io.quarkus.qute.Template;
 
 @Path("/character")
 @Produces(MediaType.APPLICATION_JSON)
@@ -14,6 +17,9 @@ import jakarta.ws.rs.core.Response;
 public class CharacterCreatorResource {
     private Dice dice;
 
+    @Inject 
+    Template create;
+    
     @POST
     public Response createCharacter(Character player) {
         try {
